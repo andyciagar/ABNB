@@ -3235,11 +3235,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Admin\\Desktop\\ABNB\\api\\Api.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\ABNB\\Api\\Api.csproj",
       "projectName": "Api",
-      "projectPath": "c:\\Users\\Admin\\Desktop\\ABNB\\api\\Api.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\ABNB\\Api\\Api.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Admin\\Desktop\\ABNB\\api\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\ABNB\\Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3258,8 +3258,8 @@
             "C:\\Users\\Admin\\Desktop\\ABNB\\ABNB.ServiceDefaults\\ABNB.ServiceDefaults.csproj": {
               "projectPath": "C:\\Users\\Admin\\Desktop\\ABNB\\ABNB.ServiceDefaults\\ABNB.ServiceDefaults.csproj"
             },
-            "c:\\Users\\Admin\\Desktop\\ABNB\\Application\\Application.csproj": {
-              "projectPath": "c:\\Users\\Admin\\Desktop\\ABNB\\Application\\Application.csproj"
+            "C:\\Users\\Admin\\Desktop\\ABNB\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\ABNB\\Application\\Application.csproj"
             },
             "C:\\Users\\Admin\\Desktop\\ABNB\\Domain\\Domain.csproj": {
               "projectPath": "C:\\Users\\Admin\\Desktop\\ABNB\\Domain\\Domain.csproj"
