@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddInfrastructure();
 builder.Services.AddScoped<IDepartamentoGetAll, DepartamentoGetAll>();
+builder.Services.AddScoped<IDepartamentoGetById, DepartamentoGetById>();
 
 
 var app = builder.Build();
@@ -41,6 +42,22 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+
+app.MapGet(
+        "/departamentos/{id}",
+        async (int id, IDepartamentoGetById departamentoGetById) =>
+        {
+            var departamento = await departamentoGetById.Execute(id);
+
+            if (departamento is null)
+            {
+                return Results.NotFound();
+            }
+
+            return Results.Ok(departamento);
+        }
+    )
+    .WithName("GetDepartamentoById");
 
 app.MapGet(
         "/departamentos", 

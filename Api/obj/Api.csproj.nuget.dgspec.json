@@ -544,8 +544,8 @@
               "C:\\Users\\Admin\\Desktop\\ABNB\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\Admin\\Desktop\\ABNB\\Domain\\Domain.csproj"
               },
-              "c:\\Users\\Admin\\Desktop\\ABNB\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "c:\\Users\\Admin\\Desktop\\ABNB\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Admin\\Desktop\\ABNB\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\ABNB\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -1683,14 +1683,14 @@
         }
       }
     },
-    "c:\\Users\\Admin\\Desktop\\ABNB\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Admin\\Desktop\\ABNB\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Admin\\Desktop\\ABNB\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\ABNB\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "c:\\Users\\Admin\\Desktop\\ABNB\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\ABNB\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Admin\\Desktop\\ABNB\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\ABNB\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
