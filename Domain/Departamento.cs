@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using Domain.Comunes;
 
 namespace Domain;
 
-public class Departamento
+public class Departamento : Entidad
 {
-    public int Id { get; set; }
     public Nombre Nombre { get; set; } = new Nombre(string.Empty);
-    public Dinero Precio { get; set; } = new Dinero(0);
+    
+    //public Dinero Precio { get; set; } = new Dinero(0, Moneda.USD);
 }
 
 
@@ -19,6 +20,13 @@ public record Moneda
     public static readonly Moneda USD = new Moneda("USD");
     public static readonly Moneda EUR = new Moneda("EUR");
     public string Codigo { get;private init; } 
+
+    public static Moneda FromCodigo(string codigo) => codigo switch
+    {
+        "EUR" => EUR,
+        _ => USD,
+    };
+
     private Moneda(string codigo)
     {
         Codigo = codigo;

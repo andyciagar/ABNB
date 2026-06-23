@@ -12,6 +12,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddInfrastructure();
 builder.Services.AddScoped<IDepartamentoGetAll, DepartamentoGetAll>();
 builder.Services.AddScoped<IDepartamentoGetById, DepartamentoGetById>();
+builder.AddServiceDefaults();
 
 
 var app = builder.Build();
