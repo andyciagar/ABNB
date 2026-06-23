@@ -1,6 +1,6 @@
 @Api_HostAddress = http://localhost:5101
 
-GET {{Api_HostAddress}}/departamentos/
+GET {{Api_HostAddress}}/departamentos
 Accept: application/json
 
 ###

@@ -1,16 +1,40 @@
-using Infrastructure.Data.Repository;
-using Domain;
+using Infrastructure;
 using Application.Departamentos.Queries;
+using Infrastructure.Data;
+using Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-
+builder.Services.AddInfrastructure();
 builder.Services.AddScoped<IDepartamentoGetAll, DepartamentoGetAll>();
-builder.Services.AddScoped<IDepartamentoRepository, DepartamentoRepository>();
+
+
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationContext>();
+    await dbContext.Database.EnsureCreatedAsync();
+
+    if (app.Environment.IsDevelopment() && !dbContext.Departamentos.Any())
+    {
+        dbContext.Departamentos.AddRange(
+            new Departamento
+            {
+                Nombre = "Departamento 1",
+            },
+            new Departamento
+            {
+                Nombre = "Departamento 2",
+            }
+        );
+
+        await dbContext.SaveChangesAsync();
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
