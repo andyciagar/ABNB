@@ -25,11 +25,11 @@ using (var scope = app.Services.CreateScope())
         dbContext.Departamentos.AddRange(
             new Departamento
             {
-                Nombre = "Departamento 1",
+                Nombre = new Nombre("Departamento 1"),
             },
             new Departamento
             {
-                Nombre = "Departamento 2",
+                Nombre = new Nombre("Departamento 2"),
             }
         );
 

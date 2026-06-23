@@ -18,7 +18,7 @@ public class DepartamentoGetById : IDepartamentoGetById
     public async Task<DepartamentoGetByIdDto?> Execute(int id)
     {
         var departamento = await _repositoryDepartamento.GetByIdAsync(id);
-        return departamento is null ? null : new DepartamentoGetByIdDto(departamento.Id, departamento.Nombre);
+        return departamento is null ? null : new DepartamentoGetByIdDto(departamento.Id, departamento.Nombre.Value);
     }
 }
 public record DepartamentoGetByIdDto(int Id, string Nombre);
