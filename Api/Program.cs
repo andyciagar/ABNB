@@ -2,6 +2,7 @@ using Infrastructure;
 using Application.Departamentos.Queries;
 using Infrastructure.Data;
 using Domain;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +19,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationContext>();
-    await dbContext.Database.EnsureCreatedAsync();
+    await dbContext.Database.MigrateAsync();
 
     if (app.Environment.IsDevelopment() && !dbContext.Departamentos.Any())
     {

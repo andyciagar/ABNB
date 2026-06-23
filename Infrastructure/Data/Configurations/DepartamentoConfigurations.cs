@@ -14,6 +14,22 @@ public class DepartamentoConfigurations : IEntityTypeConfiguration<Departamento>
             .Property(d => d.Nombre)
             .HasConversion(n => n.Value, s => new Nombre(s))
             .HasColumnName("NombreDepartamento")
+            .HasMaxLength(100)
             .IsRequired(); 
-    }
+        builder.OwnsOne(
+            d => d.Precio,
+            p =>
+            {
+                p.Property(p => p.Value)
+                    .HasConversion( v=> v, d => new Dinero(d, Moneda.USD))
+                    .HasColumnName("PrecioValor")
+                    .HasColumnType("decimal(18,2)")
+                    .IsRequired();
+                p.Property(p => p.Moneda)
+                    .HasColumnName("PrecioMoneda")
+                    .HasMaxLength(3)
+                    .IsRequired();
+            }
+    )
+
 }
