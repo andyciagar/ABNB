@@ -36,6 +36,16 @@
             "related": ".pdb;.xml"
           }
         }
+      },
+      "Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Application.dll": {}
+        }
       }
     }
   },
@@ -75,10 +85,16 @@
         "microsoft.openapi.2.0.0.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+    },
+    "Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Application >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.9"
     ]
   },
@@ -107,7 +123,11 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Admin\\Desktop\\ABNB\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\ABNB\\Application\\Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
